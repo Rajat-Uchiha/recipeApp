@@ -9,7 +9,7 @@ export const Recipecard = (props) => {
   const saveRecipe = async (recipeId) => {
     try {
       const response = await axios.put(
-        "http://localhost:3001/recipes",
+        "https://letscooktasty.onrender.com/recipes",
         {
           recipeId,
           userID,

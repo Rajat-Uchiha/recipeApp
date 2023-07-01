@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import registerPoster from "./registerPoster.png";
 import Swal from "sweetalert2";
-export const Register = () => {
+export const Register = (props) => {
   const [username, setUsername] = useState("");
   const [password, setUserpassword] = useState("");
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ export const Register = () => {
     event.preventDefault();
 
     try {
-      await axios.post("http://localhost:3001/auth/register", {
+      await axios.post(`${props.WEBSERVICE}/auth/register`, {
         username,
         password,
       });
@@ -20,7 +20,11 @@ export const Register = () => {
 
       navigate("/login");
     } catch (err) {
-      console.error(err);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "User Already exits!",
+      });
     }
   };
 

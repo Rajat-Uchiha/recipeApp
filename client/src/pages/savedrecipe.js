@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Login } from "./login";
-export const Savedrecipe = () => {
+export const Savedrecipe = (props) => {
   const [cookie] = useCookies(["access_token"]);
 
   const [savedRecipes, setSavedRecipes] = useState([]);
@@ -14,7 +14,7 @@ export const Savedrecipe = () => {
     const fetchSavedRecipes = async (req, res) => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/recipes/savedrecipes/${userID}`
+          `${props.WEBSERVICE}/recipes/savedrecipes/${userID}`
         );
         setSavedRecipes(response.data);
         // console.log(response.data);

@@ -9,16 +9,27 @@ import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
+  const WEBSERVICE = "https://letscooktasty.onrender.com";
+
   return (
     <>
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/savedrecipe" element={<Savedrecipe />} />
-          <Route path="/addrecipe" element={<Addrecipe />} />
+          <Route path="/" element={<Home WEBSERVICE={WEBSERVICE} />} />
+          <Route path="/login" element={<Login WEBSERVICE={WEBSERVICE} />} />
+          <Route
+            path="/register"
+            element={<Register WEBSERVICE={WEBSERVICE} />}
+          />
+          <Route
+            path="/savedrecipe"
+            element={<Savedrecipe WEBSERVICE={WEBSERVICE} />}
+          />
+          <Route
+            path="/addrecipe"
+            element={<Addrecipe WEBSERVICE={WEBSERVICE} />}
+          />
         </Routes>
         <Footer />
       </Router>

@@ -4,7 +4,7 @@ import axios from "axios";
 import { useCookies } from "react-cookie";
 import loginPoster from "./loginPoster.png";
 import Swal from "sweetalert2";
-export const Login = () => {
+export const Login = (props) => {
   const [username, setUsername] = useState("");
   const [password, setUserpassword] = useState("");
 
@@ -15,7 +15,7 @@ export const Login = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:3001/auth/login", {
+      const response = await axios.post(`${props.WEBSERVICE}/auth/login`, {
         username,
         password,
       });

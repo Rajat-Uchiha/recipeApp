@@ -1,7 +1,7 @@
 import { Recipecard } from "./recipecard";
 import { useEffect, useState } from "react";
 import axios from "axios";
-export const Home = () => {
+export const Home = (props) => {
   const [recipes, setRecipes] = useState([]);
   const userID = window.localStorage.getItem("userID");
   const [savedRecipes, setSavedRecipes] = useState([]);
@@ -9,7 +9,7 @@ export const Home = () => {
   useEffect(() => {
     const fetchRecpies = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/recipes");
+        const response = await axios.get(`${props.WEBSERVICE}/recipes`);
         setRecipes(response.data);
         // console.log(response.data);
       } catch (err) {
@@ -20,7 +20,7 @@ export const Home = () => {
     const fetchSavedRecipes = async (req, res) => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/recipes/savedrecipes/ids/${userID}`,
+          `${props.WEBSERVICE}/recipes/savedrecipes/ids/${userID}`,
           {
             userID,
           }

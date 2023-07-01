@@ -5,7 +5,7 @@ import { Login } from "./login";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-export const Addrecipe = () => {
+export const Addrecipe = (props) => {
   const [cookie] = useCookies(["access_token"]);
   const navigate = useNavigate();
 
@@ -28,7 +28,7 @@ export const Addrecipe = () => {
     event.preventDefault();
 
     try {
-      await axios.post("http://localhost:3001/recipes", recipe, {
+      await axios.post(`${props.WEBSERVICE}/recipes`, recipe, {
         headers: { authorization: cookie.access_token },
       });
       Swal.fire("Cooking++ !", "Recipe Saved!", "success");
