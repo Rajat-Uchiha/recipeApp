@@ -2,7 +2,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { useCookies } from "react-cookie";
-import loginPoster from "./loginPoster.png";
+// import loginPoster from "./loginPoster.png";
+import loginImg from "./loginImg.jpg";
 import Swal from "sweetalert2";
 export const Login = (props) => {
   const [username, setUsername] = useState("");
@@ -38,9 +39,9 @@ export const Login = (props) => {
   return (
     <section className="h-full w-full md:flex md:flex-row flex flex-col ">
       <div className=" w-full md:w-1/2 flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 ">
-        <div className="w-full bg-white rounded-lg  shadow-2xl dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-500 dark:border-gray-500">
+        <div className="w-full bg-white   dark:border shadow-2xl md:mt-0 sm:max-w-md xl:p-0 dark:bg-black/80 dark:border-black/80">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <h1 className="text-xl font-Nunito font-bold leading-tight tracking-tight text-gray-900 md:text-4xl dark:text-white">
+            <h1 className="text-xl font-Crimson font-light leading-tight tracking-tight text-gray-900 md:text-4xl dark:text-white">
               Login
             </h1>
             <form
@@ -51,7 +52,7 @@ export const Login = (props) => {
               <div>
                 <label
                   htmlFor="username"
-                  className="block mb-2 font-Nunito font-bold text-lg text-gray-900 dark:text-white"
+                  className="block mb-2 font-Crimson font-extralight text-lg text-gray-900 dark:text-white"
                 >
                   Username
                 </label>
@@ -59,7 +60,7 @@ export const Login = (props) => {
                   type="text"
                   name="username"
                   id="username"
-                  className="bg-gray-50 border font-Nunito border-gray-600 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:text-white "
+                  className="bg-gray-50 border font-Crimson border-gray-600 text-gray-900 sm:text-sm  focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-black/20  dark:border-gray-600 dark:text-white"
                   onChange={(event) => {
                     setUsername(event.target.value);
                   }}
@@ -68,7 +69,7 @@ export const Login = (props) => {
               <div>
                 <label
                   htmlFor="password"
-                  className="block mb-2 font-Nunito font-bold text-lg text-gray-900 dark:text-white"
+                  className="block mb-2 font-Crimson font-extralight text-lg text-gray-900 dark:text-white"
                 >
                   Password
                 </label>
@@ -77,7 +78,7 @@ export const Login = (props) => {
                   name="password"
                   autoComplete="on"
                   id="password"
-                  className="bg-gray-50 font-Nunito border border-gray-600 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:text-white "
+                  className="bg-gray-50 border font-Crimson border-gray-600 text-gray-900 sm:text-sm  focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-black/20  dark:border-gray-600 dark:text-white"
                   onChange={(event) => {
                     setUserpassword(event.target.value);
                   }}
@@ -86,16 +87,16 @@ export const Login = (props) => {
 
               <button
                 type="submit"
-                className="w-full font-Nunito font-bold text-lg text-white border-2 hover:bg-gray-700 border-gray-200 rounded-lg px-5 py-2.5 text-center "
+                className="w-full font-Crimson font-light text-lg text-white border-2 hover:bg-stone-900 border-gray-200  px-5 py-2.5 text-center "
               >
                 Login
               </button>
-              <p className="text-md font-Nunito font-bold text-gray-100">
+              <p className="text-md font-Crimson font-thin text-gray-100">
                 Don't have an account?
                 <Link
                   to="/register"
                   href="#"
-                  className="font-Nunito font-semibold hover:underline pl-1"
+                  className="font-Crimson font-thin hover:underline pl-1"
                 >
                   Join here
                 </Link>
@@ -105,11 +106,7 @@ export const Login = (props) => {
         </div>
       </div>
       <div className=" w-full md:w-1/2">
-        <img
-          className="w-full h-full object-cover "
-          src={loginPoster}
-          alt="bg"
-        />
+        <img className="w-full h-full object-cover " src={loginImg} alt="bg" />
       </div>
     </section>
   );

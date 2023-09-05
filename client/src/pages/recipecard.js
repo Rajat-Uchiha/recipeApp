@@ -25,19 +25,19 @@ export const Recipecard = (props) => {
   const isRecipeSaved = (id) => props.savedRecipes.includes(id);
 
   const btnClass1 =
-    "border-2 border-red-800 bg-red-800 opacity-50 transition-all text-gray-100 text-sm text-end font-semibold py-0 px-2 rounded-md";
+    "border-2 border-red-800 bg-red-800 opacity-50 transition-all text-white font-Crimson text-sm text-end py-0 px-2 ";
   const btnClass2 =
-    "border-2 border-green-800 bg-green-800 transition-all text-gray-100 text-sm text-end font-semibold py-0 px-2 rounded-md";
+    "border-2 border-green-800 bg-green-800 transition-all text-white font-Crimson text-sm text-end py-0 px-2 ";
 
   return (
-    <div className=" xl:w-1/4 md:w-1/2 p-4 font-Nunito font-bold">
-      <div className="bg-gray-200 p-6 rounded-lg shadow-2xl">
+    <div className=" xl:w-1/3 md:w-1/2 p-4 font-Crimson font-light">
+      <div className="p-6">
         <img
-          className="h-40 rounded w-full object-cover object-center mb-6"
+          className="h-60 w-full object-cover object-center mb-6"
           src={props.recipe.imageUrl}
           alt="content"
         />
-        <h2 className="text-2xl text-gray-800 font-bold title-font mb-2 flex justify-between">
+        <h2 className="text-xl font-Crimson font-normal text-gray-800 title-font mb-2 flex justify-between">
           {props.recipe.name.charAt(0).toUpperCase() +
             props.recipe.name.slice(1)}
 
@@ -61,21 +61,21 @@ export const Recipecard = (props) => {
             </button>
           )}
         </h2>
-        <h3 className=" text-green-700 text-base font-bold title-font mb-2 ">
+        <h3 className=" text-green-700 text-lg font-normal title-font mb-2 ">
           {props.recipe.cookingTime} minutes to prepare.
         </h3>
-        <h6 className="font-Nunito text-lg font-extrabold underline underline-offset-2 my-1 ">
+        <h6 className="font-Crimson text-lg font-medium my-1 ">
           Ingredients Needed:
         </h6>
         {/* <br /> */}
-        <p className="leading-relaxed text-base mb-2">
+        <p className="leading-relaxed text-xl mb-2">
           {props.recipe.ingredients.charAt(0).toUpperCase() +
             props.recipe.ingredients.slice(1)}
         </p>
-        <h6 className="font-Nunito text-lg font-extrabold underline underline-offset-2 my-1 ">
+        <h6 className="font-Crimson text-lg font-medium my-1 ">
           Intructions to make the cooking easy:
         </h6>
-        <p className="leading-relaxed text-base">
+        <p className="leading-relaxed text-xl">
           {props.recipe.instructions.charAt(0).toUpperCase() +
             props.recipe.instructions.slice(1)}
         </p>

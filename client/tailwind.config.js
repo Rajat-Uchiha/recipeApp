@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Nunito: ["Nunito", "sans-serif"],
+        Crimson: ["Crimson+Text", "sans-serif"],
       },
     },
   },

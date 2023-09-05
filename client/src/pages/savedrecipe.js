@@ -42,20 +42,19 @@ export const Savedrecipe = (props) => {
     if (isLoaded) {
       return (
         <section className="text-gray-800 body-font px-10 min-h-screen">
-          <h1 className="font-Nunito text-7xl font-bold text-start py-8 underline underline-offset-4">
+          <h1 className="font-Crimson text-6xl font-thin py-4 lg:py-8 underline underline-offset-8 text-start mt-10">
             Your Saved Recipes
           </h1>
-
           <div className="container py-8 mx-auto">
             <div className="flex flex-wrap -m-4">
               {savedRecipes.length === 0 ? (
                 <div className="flex flex-col justify-center mx-auto items-center space-y-4">
-                  <h1 className="font-Nunito mx-auto font-bold text-xl text-center">
+                  <h1 className="font-Crimson mx-auto font-base text-xl text-center">
                     You haven't saved any recipe yet.
                   </h1>
                   <button
                     onClick={saveRecipeBtn}
-                    className="border-2 border-green-800 hover:bg-green-900 hover:border-green-900 bg-green-800 rounded-lg text-white font-Nunito text-base font-bold px-2 py-1"
+                    className="hover:bg-green-900 hover:border-green-900 bg-green-800  text-white font-Crimson text-lg font-base px-6 py-2"
                   >
                     Save Recipes
                   </button>
