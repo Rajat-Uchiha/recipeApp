@@ -42,7 +42,7 @@ export const Addrecipe = (props) => {
   } else {
     return (
       <>
-        <h2 className="font-Crimson text-5xl font-thin py-4 lg:py-4 underline underline-offset-8 text-center ">
+        <h2 className="font-Crimson text-3xl lg:text-5xl font-light py-4 lg:py-4 underline underline-offset-8 text-center ">
           Add a Recipe
         </h2>
         <div className=" w-full flex flex-col md:flex md:flex-row md:w-full min-h-screen">

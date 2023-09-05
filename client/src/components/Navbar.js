@@ -25,8 +25,8 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="font-light flex w-full px-10 flex-wrap justify-start items-center text-2xl ">
-        <div className=" w-1/2 ">
+      <nav className="font-light py-2 md:bg-white flex-col lg:flex lg:flex-row w-full px-2 md:px-10 lg:justify-start items-center sm:text-lg lg:text-2xl flex-wrap ">
+        <div className="py-2 w-full text-center lg:flex lg:justify-start lg:w-1/2 ">
           <Link
             to="/"
             className={
@@ -88,19 +88,19 @@ export const Navbar = () => {
           )}
         </div>
         {/* IF USER NOT LOGGED IN  */}
-        <div className=" w-1/2 flex justify-end items-center space-x-6">
+        <div className="w-full lg:w-1/2 flex justify-between lg:justify-end items-center lg:space-x-6 ">
           <div className="flex flex-col justify-center items-center ">
             {!cookies.access_token ? (
               ""
             ) : (
               <>
-                <img className="w-6" src={useravatar} alt="userpng" />
-                <p className="px-6 font-light text-base font-Crimson">
+                <img className=" w-4 md:w-6" src={useravatar} alt="userpng" />
+                <p className=" px-0 lg:px-6 font-light text-base font-Crimson">
                   {username}
                 </p>
                 <button
                   onClick={logout}
-                  className=" transition-all text-base text-white font-light px-3 bg-red-600 rounded-sm hover:bg-red-700 hover:border-red-700 hover:text-white font-Crimson"
+                  className=" transition-all text-sm lg:text-base text-white font-light px-3 bg-red-600 hover:bg-red-700 hover:border-red-700 hover:text-white font-Crimson"
                 >
                   Log out
                 </button>
@@ -108,7 +108,11 @@ export const Navbar = () => {
             )}
           </div>
           <div className=" py-4 ">
-            <img className="w-32 " src={Flavor_Fusion_Logo} alt="logo" />
+            <img
+              className="w-16 md:w-32 "
+              src={Flavor_Fusion_Logo}
+              alt="logo"
+            />
           </div>
         </div>
       </nav>
