@@ -42,11 +42,11 @@ export const Savedrecipe = (props) => {
     if (isLoaded) {
       return (
         <section className="text-gray-800 body-font px-2 lg:px-10 min-h-screen">
-          <h1 className="font-Crimson text-3xl lg:text-6xl font-light py-4 lg:py-8 underline underline-offset-8 text-start mt-4 lg:mt-10">
-            Your saved recipes
+          <h1 className="font-Crimson text-3xl lg:text-6xl font-thin py-4 md:py-8 underline underline-offset-8 text-start mt-10">
+            Your Saved Recipes
           </h1>
-          <div className="container py-8 mx-auto">
-            <div className="flex flex-wrap m-4">
+          <div className="container lg:py-8 mx-auto ">
+            <div className="flex flex-wrap lg:m-4">
               {savedRecipes.length === 0 ? (
                 <div className="flex flex-col justify-center mx-auto items-center space-y-4">
                   <h1 className="font-Crimson mx-auto font-base text-xl text-center">
