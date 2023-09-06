@@ -46,19 +46,19 @@ export const Home = (props) => {
       <section className="text-gray-800 body-font px-10 bg-gradient-to-r">
         <main className=" flex justify-center items-center my-8 ">
           <div className="flex flex-col justify-center items-start">
-            <h3 className="font-Crimson text-3xl font-thin underline underline-offset-8 mb-10">
-              Our brief Story
+            <h3 className="font-Crimson text-4xl font-thin underline underline-offset-8 mb-10">
+              Our Brief Story
             </h3>
             <p className="font-Crimson font-light font text-xl pr-40 tracking-wide leading-relaxed mb-10 ">
-              In a world where culinary curiosity knows no bounds, the "Flavor
-              Fusion" emerges as a culinary genius's dream. This digital kitchen
-              companion boasts a vast library of mouthwatering recipes from
-              every corner of the globe. With its intuitive interface, home
-              chefs effortlessly browse and customize dishes, tailoring them to
-              personal tastes and dietary preferences. But "Flavor Fusion" isn't
-              just about recipes; it's a culinary adventure. Users can embark on
-              virtual cooking journeys, exploring exotic ingredients and
-              techniques guided by chefs just like you.
+              In a world where culinary curiosity knows no bounds, the "
+              <b>Let's Cook Tasty</b>" emerges as a culinary genius's dream.
+              This digital kitchen companion boasts a vast library of
+              mouthwatering recipes from every corner of the globe. With its
+              intuitive interface, home chefs effortlessly browse and customize
+              dishes, tailoring them to personal tastes and dietary preferences.
+              But "Flavor Fusion" isn't just about recipes; it's a culinary
+              adventure. Users can embark on virtual cooking journeys, exploring
+              exotic ingredients and techniques guided by chefs just like you.
             </p>
           </div>
 

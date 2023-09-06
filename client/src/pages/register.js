@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-// import registerPoster from "./registerPoster.png";
 import registerImg from "./registerImg.jpg";
-// import registerBg from "./registerBg.jpg";
 import Swal from "sweetalert2";
 export const Register = (props) => {
   const [username, setUsername] = useState("");
