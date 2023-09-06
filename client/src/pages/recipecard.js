@@ -31,9 +31,9 @@ export const Recipecard = (props) => {
 
   return (
     <div className=" xl:w-1/3 md:w-1/2 p-4 font-Crimson font-light">
-      <div className="p-6">
+      <div className="lg:p-6">
         <img
-          className="h-60 w-full object-cover object-center mb-6"
+          className="h-40 md:h-60 w-full object-cover object-center mb-4 md:mb-6"
           src={props.recipe.imageUrl}
           alt="content"
         />
@@ -68,14 +68,14 @@ export const Recipecard = (props) => {
           Ingredients Needed:
         </h6>
         {/* <br /> */}
-        <p className="leading-relaxed text-xl mb-2">
+        <p className="leading-relaxed text-base md:text-xl mb-2">
           {props.recipe.ingredients.charAt(0).toUpperCase() +
             props.recipe.ingredients.slice(1)}
         </p>
         <h6 className="font-Crimson text-lg font-medium my-1 ">
           Intructions to make the cooking easy:
         </h6>
-        <p className="leading-relaxed text-xl">
+        <p className="leading-relaxed text-base md:text-xl">
           {props.recipe.instructions.charAt(0).toUpperCase() +
             props.recipe.instructions.slice(1)}
         </p>

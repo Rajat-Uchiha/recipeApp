@@ -4,7 +4,9 @@ const Footer = () => {
   return (
     <div className="bg-white font-Crimson py-4 flex justify-center items-center space-x-6 z-40">
       <img className="w-20 " src={myLogo} alt="logo" />
-      <h1 className=" text-lg">&#169; flavorfusion.netlify.app</h1>
+      <h1 className=" font-Crimson md:text-lg">
+        &#169; letscooktasty.netlify.app
+      </h1>
     </div>
   );
 };
