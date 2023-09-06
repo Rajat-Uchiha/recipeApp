@@ -97,13 +97,13 @@ export const Navbar = () => {
               ""
             ) : (
               <>
-                <img className="w-6" src={useravatar} alt="userpng" />
-                <p className="px-6 font-light text-base font-Crimson">
+                <img className=" w-4 md:w-6" src={useravatar} alt="userpng" />
+                <p className=" px-0 lg:px-6 font-light text-base font-Crimson">
                   {username}
                 </p>
                 <button
                   onClick={logout}
-                  className=" transition-all text-base text-white font-light px-3 bg-red-600 rounded-sm hover:bg-red-700 hover:border-red-700 hover:text-white font-Crimson"
+                  className=" transition-all text-sm lg:text-base text-white font-light px-3 bg-red-600 hover:bg-red-700 hover:border-red-700 hover:text-white font-Crimson"
                 >
                   Log out
                 </button>

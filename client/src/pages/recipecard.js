@@ -37,7 +37,7 @@ export const Recipecard = (props) => {
           src={props.recipe.imageUrl}
           alt="content"
         />
-        <h2 className="text-xl font-Crimson font-normal text-gray-800 title-font mb-2 flex justify-between">
+        <h2 className="text-lg lg:text-xl font-Crimson font-normal text-gray-800 title-font mb-2 flex justify-between">
           {props.recipe.name.charAt(0).toUpperCase() +
             props.recipe.name.slice(1)}
 
@@ -61,20 +61,22 @@ export const Recipecard = (props) => {
             </button>
           )}
         </h2>
-        <h3 className=" text-green-700 text-lg font-normal title-font mb-2 ">
+        <h3 className=" text-green-700 text-md lg:text-lg font-normal title-font mb-2 ">
           {props.recipe.cookingTime} minutes to prepare.
         </h3>
-        <h6 className="font-Crimson text-lg font-medium my-1 ">
+        <h6 className="font-Crimson lg:text-lg font-medium my-1 ">
           Ingredients Needed:
         </h6>
         {/* <br /> */}
+
         <p className="leading-relaxed text-base md:text-xl mb-2">
           {props.recipe.ingredients.charAt(0).toUpperCase() +
             props.recipe.ingredients.slice(1)}
         </p>
-        <h6 className="font-Crimson text-lg font-medium my-1 ">
+        <h6 className="font-Crimson text-md lg:text-lg font-medium my-1 ">
           Intructions to make the cooking easy:
         </h6>
+
         <p className="leading-relaxed text-base md:text-xl">
           {props.recipe.instructions.charAt(0).toUpperCase() +
             props.recipe.instructions.slice(1)}
